@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'byteback';
+  transferencias: any[] = [];
+  transferir($event) {
+    const transferencia = {...$event, data: new Date()}
+    console.log(transferencia);
+    this.transferencias.push(transferencia);
+  }
 }
